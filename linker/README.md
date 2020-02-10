@@ -37,7 +37,7 @@ $ my_ld -o output_file input_file.o
 
 * there is only 3 relocation types to handle:
 
-	* `R_X86_64_32`
+	* `R_X86_64_32` (only for the debug versions)
 	* `R_X86_64_64`
 	* `R_X86_64_PC32`
 
@@ -50,3 +50,6 @@ $ my_ld -o output_file input_file.o
     - one with R permissions (for the section marked with `A` flags)
     - one with RW permissions (for the section marked with `AW` flags)
     - drop every other sections.
+
+* sections are useful only to be launched inside a debugger
+* for debugging, strace and dmesg will help
