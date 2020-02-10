@@ -1,13 +1,13 @@
 My small linker
 ===============
 
-repository: git@git.cri.epita.fr:p/$promo-sys/hts-$login.git
+repository: `git@git.cri.epita.fr:p/$promo-sys/hts-$login.git`
 directory: linker
 
 
 You need to be able to build all the binaires in the `tests` directory:
 
-```shell-session
+```shellsession
 $ make my_ld
 $ make -C tests MY_LD=../my_ld
 ```
@@ -25,7 +25,7 @@ And 2 variants, one with debug symbols, and one without.
 
 ### Command line usage
 
-```shell-session
+```shellsession
 $ my_ld -o output_file input_file.o
 ```
 
