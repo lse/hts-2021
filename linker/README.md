@@ -40,5 +40,7 @@ $ my_ld -o output_file input_file.o
 	* `R_X86_64_64`
 	* `R_X86_64_PC32`
 
+* `entry_point` address must be the address of `_start`
+
 * look into:
     * `elf.h`
