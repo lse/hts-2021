@@ -42,7 +42,7 @@ $ my_ld -o output_file input_file.o
 	* `R_X86_64_PC32`
 
 * `entry_point` address must be the address of `_start`
-* look into: `elf.h` header (`/usr/include/elf.h`)
+
 
 * we only need at most 3 PHDR:
 
@@ -53,3 +53,6 @@ $ my_ld -o output_file input_file.o
 
 * sections are useful only to be launched inside a debugger
 * for debugging, strace and dmesg will help
+
+* look into: `elf.h` header (`/usr/include/elf.h`)
+* for the relocations, you can look into: https://refspecs.linuxfoundation.org/elf/x86_64-abi-0.95.pdf section 4.4
