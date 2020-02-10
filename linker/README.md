@@ -21,6 +21,7 @@ There are 3 samples:
 
 And 2 variants, one with debug symbols, and one without.
 
+Time Constrain: the debug versions are not mandatory.
 
 ### Command line usage
 
@@ -41,6 +42,11 @@ $ my_ld -o output_file input_file.o
 	* `R_X86_64_PC32`
 
 * `entry_point` address must be the address of `_start`
+* look into: `elf.h` header (`/usr/include/elf.h`)
 
-* look into:
-    * `elf.h`
+* we only need at most 3 PHDR:
+
+    - one with RX permissions (for the section marked with `AX` flags)
+    - one with R permissions (for the section marked with `A` flags)
+    - one with RW permissions (for the section marked with `AW` flags)
+    - drop every other sections.
