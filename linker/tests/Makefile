@@ -4,7 +4,6 @@ CFLAGS = -Wall -Wextra \
 
 
 DISABLE_EH_FRAME = \
-	 -fno-unwind-tables \
 	 -fomit-frame-pointer \
 	 -fno-exceptions \
 	 -fno-asynchronous-unwind-tables \
