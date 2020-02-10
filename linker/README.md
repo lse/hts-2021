@@ -1,9 +1,8 @@
 My small linker
 ===============
 
-repository: `git@git.cri.epita.fr:p/$promo-sys/hts-$login.git`
-directory: linker
-
+* repository: `git@git.cri.epita.fr:p/${promo}-sys/hts-${login}.git`
+* directory: linker
 
 You need to be able to build all the binaires in the `tests` directory:
 
@@ -34,3 +33,12 @@ $ my_ld -o output_file input_file.o
 * instead of trying to handle all cases, assert that your are in a known code
   path. (for example, don't try to handle all the relocations, but write an
   error message for unhandled ones)
+
+* there is only 3 relocation types to handle:
+
+	* `R_X86_64_32`
+	* `R_X86_64_64`
+	* `R_X86_64_PC32`
+
+* look into:
+    * `elf.h`
